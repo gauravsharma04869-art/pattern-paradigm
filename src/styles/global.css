@@ -130,6 +130,9 @@
   .tag {
     @apply text-[10px] tracking-[0.2em] uppercase text-[#C9956B]/60 border border-[#C9956B]/15 rounded-full px-4 py-1.5 inline-block;
   }
+  .tag-sm {
+    @apply text-[9px] text-[#C9956B]/50 tracking-[0.2em] uppercase border border-[#C9956B]/15 rounded-full px-3 py-1 inline-block;
+  }
 
   /* ===== DECORATIVE RINGS ===== */
   .pattern-ring {
@@ -239,6 +242,15 @@
   @keyframes marquee {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+  }
+
+  /* ===== CITATION BLOCK (compact research citations) ===== */
+  .citation-block {
+    border-left: 2px solid rgba(201, 149, 107, 0.2);
+    padding: 0 0 0 16px;
+  }
+  .citation-block p {
+    @apply text-sm sm:text-base text-[#B0A89B]/80 not-italic font-normal;
   }
 
   /* ===== BORDER ANIMATION ===== */
