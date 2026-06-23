@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Waitlist" description="Join the early circle for the Pattern Paradigm. Highly selective entry for those ready to reclaim their pattern.">
+  <Nav slot="nav" currentPath="/waitlist" />
+  <Footer slot="footer" />
+
+  <!-- ══════════ HERO + FORM ══════════ -->
+  <section class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden atmosphere-2">
+    <div class="absolute inset-0 sacred-dots pointer-events-none"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-[#C9956B]/4 blur-3xl breathe pointer-events-none"></div>
+
+    <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+      <div class="space-y-6 reveal">
+        <span class="tag">Get Early Access</span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight mt-5 text-[#E8E0D4]">Reclaim Your <span class="gold-text italic">Pattern</span></h1>
+        <p class="text-base sm:text-lg text-[#B0A89B]/70 leading-relaxed">
+          The Pattern Paradigm is opening to its first cohort soon. Early members will help shape the program and receive priority access to everything we build.
+        </p>
+        <div class="glass-card rounded-lg p-5 sm:p-6 space-y-3">
+          <p class="text-[10px] text-[#C9956B]/60 uppercase tracking-[0.15em]">Early access includes</p>
+          <ul class="text-sm text-[#B0A89B]/80 space-y-1.5">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-[#C9956B]/40 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" d="M4.5 12.75l6 6 9-13.5"/>
+              </svg>
+              Priority access to the first cohort (limited to 50 members)
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-[#C9956B]/40 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" d="M4.5 12.75l6 6 9-13.5"/>
+              </svg>
+              Founders' pricing — locked for life
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-[#C9956B]/40 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" d="M4.5 12.75l6 6 9-13.5"/>
+              </svg>
+              Direct input into protocol development
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-[#C9956B]/40 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" d="M4.5 12.75l6 6 9-13.5"/>
+              </svg>
+              Early access to research and essays
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="glass-card-heavy rounded-lg p-6 sm:p-8 lg:p-10 reveal">
+        <form class="space-y-6" method="POST" action="/api/waitlist">
+          <div>
+            <label class="text-[9px] text-[#B0A89B]/50 uppercase tracking-[0.15em] mb-2 block" for="name">Name</label>
+            <input id="name" class="w-full bg-transparent border-b border-[#C9956B]/10 px-0 py-3 text-[#F2EDE4] text-lg outline-none transition-all duration-300 focus:border-[#C9956B]/40 placeholder:text-[#B0A89B]/20" name="name" placeholder="Your name" required type="text"/>
+          </div>
+          <div>
+            <label class="text-[9px] text-[#B0A89B]/50 uppercase tracking-[0.15em] mb-2 block" for="email">Email Address</label>
+            <input id="email" class="w-full bg-transparent border-b border-[#C9956B]/10 px-0 py-3 text-[#F2EDE4] text-lg outline-none transition-all duration-300 focus:border-[#C9956B]/40 placeholder:text-[#B0A89B]/20" name="email" placeholder="name@domain.com" required type="email"/>
+          </div>
+          <div>
+            <label class="text-[9px] text-[#B0A89B]/50 uppercase tracking-[0.15em] mb-2 block" for="interest">What brings you here?</label>
+            <select id="interest" class="w-full bg-transparent border-b border-[#C9956B]/10 px-0 py-3 text-[#F2EDE4] text-lg outline-none transition-all duration-300 focus:border-[#C9956B]/40" name="interest">
+              <option value="" disabled selected class="bg-[#0A0A0F]">Select one</option>
+              <option value="anxiety" class="bg-[#0A0A0F]">Anxiety & Overwhelm</option>
+              <option value="sleep" class="bg-[#0A0A0F]">Sleep Disruption</option>
+              <option value="pain" class="bg-[#0A0A0F]">Chronic Pain</option>
+              <option value="curiosity" class="bg-[#0A0A0F]">Curiosity / Research</option>
+              <option value="other" class="bg-[#0A0A0F]">Other</option>
+            </select>
+          </div>
+          <button class="w-full bg-[#C9956B] text-[#0A0A0F] py-3 sm:py-4 rounded text-xs uppercase tracking-[0.15em] hover:bg-[#D4A67B] active:scale-[0.98] transition-all duration-300 font-medium" type="submit">
+            Get Early Access
+          </button>
+        </form>
+        <p class="text-center text-[9px] text-[#B0A89B]/20 uppercase tracking-[0.1em] mt-6">Highly selective. Your information is never shared.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden atmosphere-1">
+    <div class="absolute inset-0 sacred-dots-dense pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto relative">
+      <div class="text-center mb-12 reveal">
+        <span class="tag">Questions</span>
+        <h2 class="font-display text-3xl sm:text-4xl mt-5 mb-3 leading-tight text-[#E8E0D4]">Frequently Asked Questions</h2>
+        <div class="w-12 h-px bg-gradient-to-r from-transparent via-[#C9956B]/30 to-transparent mx-auto"></div>
+      </div>
+
+      <div class="max-w-2xl mx-auto space-y-4 reveal">
+        <details class="glass-card rounded-lg p-5 sm:p-6 group">
+          <summary class="font-display text-base sm:text-lg text-[#E8E0D4] cursor-pointer list-none flex justify-between items-center">
+            What is the Pattern Paradigm?
+            <span class="text-[#C9956B]/50 text-xl transition-transform duration-300 group-open:rotate-45">+</span>
+          </summary>
+          <div class="mt-4 text-sm sm:text-base text-[#B0A89B]/70 leading-relaxed">The Pattern Paradigm is a systematic approach to health and consciousness that bridges ancient inner technology with modern neuroscience. It translates the practical discoveries of a thousand-year-old lineage of awareness practitioners into protocols accessible to the modern nervous system.</div>
+        </details>
+
+        <details class="glass-card rounded-lg p-5 sm:p-6 group">
+          <summary class="font-display text-base sm:text-lg text-[#E8E0D4] cursor-pointer list-none flex justify-between items-center">
+            Is this a course or a community?
+            <span class="text-[#C9956B]/50 text-xl transition-transform duration-300 group-open:rotate-45">+</span>
+          </summary>
+          <div class="mt-4 text-sm sm:text-base text-[#B0A89B]/70 leading-relaxed">Neither, in the traditional sense. The Pattern Paradigm is a protocol — an operating system upgrade for human consciousness. It involves structured practices, conceptual frameworks, and direct experience. The early cohort will be small (limited to 50) to ensure depth and personalization.</div>
+        </details>
+
+        <details class="glass-card rounded-lg p-5 sm:p-6 group">
+          <summary class="font-display text-base sm:text-lg text-[#E8E0D4] cursor-pointer list-none flex justify-between items-center">
+            Do I need a background in philosophy or neuroscience?
+            <span class="text-[#C9956B]/50 text-xl transition-transform duration-300 group-open:rotate-45">+</span>
+          </summary>
+          <div class="mt-4 text-sm sm:text-base text-[#B0A89B]/70 leading-relaxed">No. The Pattern Paradigm is designed for people who have tried everything — therapy, medication, lifestyle changes — and still find themselves stuck in recurring patterns. No background required. Just a willingness to look directly at what is present.</div>
+        </details>
+
+        <details class="glass-card rounded-lg p-5 sm:p-6 group">
+          <summary class="font-display text-base sm:text-lg text-[#E8E0D4] cursor-pointer list-none flex justify-between items-center">
+            What is the time commitment?
+            <span class="text-[#C9956B]/50 text-xl transition-transform duration-300 group-open:rotate-45">+</span>
+          </summary>
+          <div class="mt-4 text-sm sm:text-base text-[#B0A89B]/70 leading-relaxed">The foundational protocol requires approximately 20 minutes per day. The depth of engagement is up to you — some members may choose to explore the practice more intensively as part of the early cohort.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

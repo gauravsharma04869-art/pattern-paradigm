@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="About" description="The Pattern Paradigm manifesto. A new way of seeing health, consciousness, and the nature of reality. Ancient wisdom meets modern clinical validation.">
+  <Nav slot="nav" currentPath="/about" />
+  <Footer slot="footer" />
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden atmosphere-1">
+    <div class="absolute inset-0 sacred-dots-dense pointer-events-none"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-[#C9956B]/4 blur-3xl breathe pointer-events-none"></div>
+
+    <!-- Corner geometry -->
+    <svg class="absolute top-12 left-8 sm:top-20 sm:left-16 w-12 h-12 sm:w-16 sm:h-16 text-[#C9956B]/5" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="0.5">
+      <path d="M5 5 L55 5 L55 55 M5 5 L5 55 L55 55"/>
+      <circle cx="5" cy="5" r="3" fill="currentColor"/>
+      <circle cx="55" cy="55" r="3" fill="currentColor"/>
+    </svg>
+    <svg class="absolute top-12 right-8 sm:top-20 sm:right-16 w-12 h-12 sm:w-16 sm:h-16 text-[#C9956B]/5 rotate-90" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="0.5">
+      <path d="M5 5 L55 5 L55 55 M5 5 L5 55 L55 55"/>
+      <circle cx="5" cy="5" r="3" fill="currentColor"/>
+      <circle cx="55" cy="55" r="3" fill="currentColor"/>
+    </svg>
+
+    <div class="max-w-3xl reveal">
+      <span class="tag">Manifesto</span>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight mt-5 mb-6 text-[#E8E0D4]">What We <span class="gold-text italic">Believe</span></h1>
+      <p class="text-base sm:text-lg text-[#B0A89B]/70 leading-relaxed">
+        The Pattern Paradigm translates the discoveries of a thousand-year lineage of inner explorers into the language of modern neuroscience. It is a map of consciousness, a model of health, and a protocol for transformation.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════ OPENING ══════════ -->
+  <section class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto overflow-hidden atmosphere-2">
+    <div class="space-y-6 text-base sm:text-lg text-[#B0A89B]/80 leading-relaxed reveal">
+      <p class="text-2xl sm:text-3xl font-display italic text-[#E8E0D4]">
+        Your health is not a chemical accident. <span class="gold-text not-italic font-normal">It is a pattern.</span>
+      </p>
+
+      <p>This is not a metaphor. It is a statement of mechanism.</p>
+
+      <p>
+        Every thought you think, every emotion you feel, every sensation in your body is a pattern of neural activity — a specific configuration of firing rates, synaptic weights, and oscillatory dynamics. These patterns are not fixed. They are plastic, learnable, and responsive to the one thing that has access to them all: conscious attention.
+      </p>
+
+      <p>
+        Modern medicine treats symptoms as if they were causes. Anxiety is met with GABAergic suppression. Pain is met with opioid blockade. Inflammation is met with cytokine inhibition. Each intervention is brilliant in its precision and blind in its assumption — that the pattern is the problem rather than the signal.
+      </p>
+
+      <p>The Pattern Paradigm takes a different position.</p>
+
+      <p>
+        Chronic conditions are not breakdowns of mechanism. They are <em class="text-[#E8E0D4]">stuck patterns</em> — neural configurations that have lost their natural fluidity and become self-sustaining loops. The body is not broken. It is frozen.
+      </p>
+
+      <p>The way out is not more chemistry. It is recognition.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ PULL QUOTE ══════════ -->
+  <section class="py-16 sm:py-20 atmosphere-1">
+    <div class="max-w-3xl mx-auto px-4 reveal">
+      <div class="pull-quote">
+        <p>"The pattern that is seen can no longer hold you. This is not philosophy. This is the structure of awareness itself."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ THREE AXIOMS ══════════ -->
+  <section class="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden atmosphere-2">
+    <div class="absolute inset-0 sacred-dots pointer-events-none"></div>
+
+    <div class="text-center mb-14 sm:mb-18 reveal">
+      <span class="tag">The Foundations</span>
+      <h2 class="font-display text-3xl sm:text-4xl mt-5 mb-3 leading-tight text-[#E8E0D4]">The Three Axioms</h2>
+      <div class="w-12 h-px bg-gradient-to-r from-transparent via-[#C9956B]/30 to-transparent mx-auto"></div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+      <div class="glass-card rounded-lg p-6 sm:p-8 lg:p-10 card-glow border-glow reveal">
+        <div class="w-10 h-10 rounded-full bg-[#C9956B]/8 flex items-center justify-center mb-4 border border-[#C9956B]/10">
+          <svg class="w-5 h-5 text-[#C9956B]/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="12" cy="12" r="1"/>
+          </svg>
+        </div>
+        <span class="text-[9px] text-[#C9956B]/50 tracking-[0.2em] uppercase">First Axiom</span>
+        <h3 class="font-display text-xl sm:text-2xl mt-2 mb-3 text-[#E8E0D4]">Reality Is Pattern</h3>
+        <p class="text-sm sm:text-base text-[#B0A89B]/70 leading-relaxed">From the quantum field to the neural network to the social collective, what we call "things" are stable, repeating configurations of more fundamental processes. The universe is not a collection of objects but a dance of patterns within awareness.</p>
+      </div>
+
+      <div class="glass-card rounded-lg p-6 sm:p-8 lg:p-10 card-glow border-glow reveal">
+        <div class="w-10 h-10 rounded-full bg-[#C9956B]/8 flex items-center justify-center mb-4 border border-[#C9956B]/10">
+          <svg class="w-5 h-5 text-[#C9956B]/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <span class="text-[9px] text-[#C9956B]/50 tracking-[0.2em] uppercase">Second Axiom</span>
+        <h3 class="font-display text-xl sm:text-2xl mt-2 mb-3 text-[#E8E0D4]">Health Is Coherence</h3>
+        <p class="text-sm sm:text-base text-[#B0A89B]/70 leading-relaxed">When the patterns that constitute your body-mind are fluid, aligned, and self-correcting, you experience what we call health. Disease is pattern freeze — a configuration that has lost its responsiveness and become rigid.</p>
+      </div>
+
+      <div class="glass-card rounded-lg p-6 sm:p-8 lg:p-10 card-glow border-glow reveal">
+        <div class="w-10 h-10 rounded-full bg-[#C9956B]/8 flex items-center justify-center mb-4 border border-[#C9956B]/10">
+          <svg class="w-5 h-5 text-[#C9956B]/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <span class="text-[9px] text-[#C9956B]/50 tracking-[0.2em] uppercase">Third Axiom</span>
+        <h3 class="font-display text-xl sm:text-2xl mt-2 mb-3 text-[#E8E0D4]">Recognition Unfreezes</h3>
+        <p class="text-sm sm:text-base text-[#B0A89B]/70 leading-relaxed">When a frozen pattern is seen clearly — not analyzed, not judged, not suppressed, but simply perceived in its full dimensionality — it dissolves. This is the central discovery of the inner technology, now validated in the neuroscience lab.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ ORIGIN ══════════ -->
+  <section class="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto overflow-hidden atmosphere-3">
+    <div class="absolute inset-0 sacred-dots-dense pointer-events-none"></div>
+
+    <div class="reveal">
+      <span class="tag">Origin</span>
+      <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl mt-5 mb-6 leading-tight text-[#E8E0D4]">Where This Comes From</h2>
+
+      <div class="space-y-5 text-base sm:text-lg text-[#B0A89B]/80 leading-relaxed">
+        <p>The Pattern Paradigm was born from a simple observation: the most sophisticated map of human consciousness was drawn over a thousand years ago by a lineage of philosophers-practitioners in the Kashmir Valley. Their findings — the 36 tattvas, the three upāyas, the doctrine of recognition — anticipate the most advanced neuroscience of the twenty-first century.</p>
+        <p>But this knowledge was locked in language too dense for the modern seeker and too metaphysical for the modern clinician. The Pattern Paradigm translates it into the vocabulary of pattern, prediction, and plasticity — making it accessible without diluting it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ INVITATION ══════════ -->
+  <section class="py-20 sm:py-28 overflow-hidden atmosphere-1 text-center">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-[#C9956B]/5 blur-3xl breathe pointer-events-none"></div>
+    <div class="absolute inset-0 sacred-dots pointer-events-none"></div>
+
+    <div class="relative max-w-2xl mx-auto px-4 space-y-6 reveal">
+      <svg class="w-8 h-8 mx-auto text-[#C9956B]/10" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/>
+      </svg>
+
+      <h2 class="font-display text-3xl sm:text-4xl text-[#E8E0D4]">The Invitation</h2>
+      <p class="text-base sm:text-lg text-[#B0A89B]/80 leading-relaxed max-w-lg mx-auto">
+        We are building the first systematic program that translates the inner technology into actionable protocols, grounded in neuroscience and designed for the modern nervous system. This is not a course. It is not a community. It is an operating system upgrade for human consciousness.
+      </p>
+      <p class="text-base sm:text-lg text-[#B0A89B]/80 leading-relaxed max-w-lg mx-auto">
+        If you have tried everything and still find yourself stuck in the same patterns, the problem is not you. It is the level at which you have been looking.
+      </p>
+
+      <div class="gold-divider !w-16 !mx-auto"></div>
+
+      <p class="text-xl sm:text-2xl font-display text-[#E8E0D4]">
+        The pattern sees itself. And in that seeing, <span class="gold-text">it transforms</span>.
+      </p>
+
+      <a href="/waitlist" class="btn-primary inline-block mt-4">Join the Waitlist</a>
+    </div>
+  </section>
+</BaseLayout>

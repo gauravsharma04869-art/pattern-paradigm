@@ -1,0 +1,364 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Pattern Paradigm" description="Where ancient wisdom meets modern neuroscience. Your health is a pattern waiting to be reclaimed.">
+  <Nav slot="nav" currentPath="/" />
+  <Footer slot="footer" />
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 overflow-hidden atmosphere-hero">
+    <!-- Floating particles -->
+    <div class="absolute inset-0 pointer-events-none" id="heroParticles">
+      <div class="particle" style="top:20%;left:15%;width:4px;height:4px;background:rgba(201,149,107,0.15)"></div>
+      <div class="particle" style="top:35%;left:75%;width:2px;height:2px;background:rgba(201,149,107,0.2)"></div>
+      <div class="particle" style="top:55%;left:85%;width:3px;height:3px;background:rgba(201,149,107,0.1)"></div>
+      <div class="particle" style="top:70%;left:10%;width:2px;height:2px;background:rgba(201,149,107,0.15)"></div>
+      <div class="particle" style="top:85%;left:45%;width:4px;height:4px;background:rgba(201,149,107,0.08)"></div>
+      <div class="particle" style="top:10%;left:55%;width:2px;height:2px;background:rgba(201,149,107,0.12)"></div>
+    </div>
+
+    <!-- Animated mandala rings -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] sm:w-[750px] sm:h-[750px] lg:w-[1000px] lg:h-[1000px] pointer-events-none parallax-slow">
+      <div class="pattern-ring w-full h-full ring-pulse" style="border-color:rgba(201,149,107,0.06);border-width:0.5px"></div>
+      <div class="pattern-ring w-[85%] h-[85%] ring-pulse" style="border-color:rgba(201,149,107,0.08);border-width:0.5px"></div>
+      <div class="pattern-ring w-[70%] h-[70%] ring-pulse" style="border-color:rgba(201,149,107,0.1);border-width:0.5px"></div>
+      <div class="pattern-ring w-[55%] h-[55%] ring-pulse" style="border-color:rgba(201,149,107,0.06);border-width:0.5px"></div>
+      <div class="pattern-ring w-[40%] h-[40%] ring-pulse" style="border-color:rgba(201,149,107,0.12);border-width:1px"></div>
+      <div class="pattern-ring w-[25%] h-[25%]" style="border-color:rgba(201,149,107,0.15);border-width:1.5px"></div>
+      <div class="pattern-ring w-[12%] h-[12%]" style="background:rgba(201,149,107,0.08);border:none;border-radius:50%;filter:blur(2px)"></div>
+    </div>
+
+    <!-- Decorative corner geometry -->
+    <svg class="absolute top-12 left-8 sm:top-20 sm:left-16 w-12 h-12 sm:w-16 sm:h-16 text-[#C9956B]/5" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="0.5">
+      <path d="M5 5 L55 5 L55 55 M5 5 L5 55 L55 55"/>
+      <circle cx="5" cy="5" r="3" fill="currentColor"/>
+      <circle cx="55" cy="55" r="3" fill="currentColor"/>
+    </svg>
+    <svg class="absolute top-12 right-8 sm:top-20 sm:right-16 w-12 h-12 sm:w-16 sm:h-16 text-[#C9956B]/5 rotate-90" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="0.5">
+      <path d="M5 5 L55 5 L55 55 M5 5 L5 55 L55 55"/>
+      <circle cx="5" cy="5" r="3" fill="currentColor"/>
+      <circle cx="55" cy="55" r="3" fill="currentColor"/>
+    </svg>
+    <svg class="absolute bottom-32 left-8 sm:bottom-40 sm:left-16 w-12 h-12 sm:w-16 sm:h-16 text-[#C9956B]/5 -rotate-90" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="0.5">
+      <path d="M5 5 L55 5 L55 55 M5 5 L5 55 L55 55"/>
+      <circle cx="5" cy="5" r="3" fill="currentColor"/>
+      <circle cx="55" cy="55" r="3" fill="currentColor"/>
+    </svg>
+    <svg class="absolute bottom-32 right-8 sm:bottom-40 sm:right-16 w-12 h-12 sm:w-16 sm:h-16 text-[#C9956B]/5 rotate-180" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="0.5">
+      <path d="M5 5 L55 5 L55 55 M5 5 L5 55 L55 55"/>
+      <circle cx="5" cy="5" r="3" fill="currentColor"/>
+      <circle cx="55" cy="55" r="3" fill="currentColor"/>
+    </svg>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl mx-auto space-y-6 sm:space-y-8">
+      <div class="flex items-center justify-center gap-3 reveal">
+        <span class="w-8 h-px bg-gradient-to-r from-transparent to-[#C9956B]/30"></span>
+        <span class="text-[10px] sm:text-xs text-[#C9956B]/50 tracking-[0.35em] uppercase">A Digital Sanctuary for Consciousness</span>
+        <span class="w-8 h-px bg-gradient-to-l from-transparent to-[#C9956B]/30"></span>
+      </div>
+
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#F2EDE4] leading-tight reveal">
+        The Pattern of<br/>
+        <span class="gold-text italic font-light tracking-tight">Consciousness</span>
+      </h1>
+
+      <div class="gold-divider !w-16 !mx-auto reveal"></div>
+
+      <p class="text-base sm:text-lg text-[#B0A89B]/80 max-w-xl mx-auto leading-relaxed tracking-wide reveal">
+        Ancient wisdom and modern neuroscience converge on a single truth —<br class="hidden sm:block"/>
+        <span class="text-[#C9956B]/90 font-medium">your health is a pattern</span>, and patterns can be recognized.
+      </p>
+
+      <div class="flex flex-col xs:flex-row items-center justify-center gap-4 sm:gap-6 pt-4 reveal">
+        <a href="/waitlist" class="btn-primary">Join the Waitlist</a>
+        <a href="/philosophy" class="group text-[#B0A89B] text-[10px] uppercase tracking-[0.25em] flex items-center gap-3 hover:text-[#C9956B] transition-colors">
+          <span class="w-6 h-px bg-[#C9956B]/30 group-hover:w-10 transition-all duration-500"></span>
+          Explore
+        </a>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-20">
+      <span class="text-[7px] uppercase tracking-[0.4em] text-[#C9956B]">Scroll</span>
+      <svg class="w-3 h-3 text-[#C9956B] animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══════════ MARQUEE ══════════ -->
+  <section class="py-4 border-t border-b border-white/[0.02] overflow-hidden bg-[#0A0A0F]/50" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="text-[#C9956B]/20 text-[9px] uppercase tracking-[0.35em] whitespace-nowrap">◇ The body is a pattern · The mind is a pattern · Health is recognition · Ancient Wisdom · Neural Proof ◇</span>
+      <span class="text-[#C9956B]/20 text-[9px] uppercase tracking-[0.35em] whitespace-nowrap">◇ The body is a pattern · The mind is a pattern · Health is recognition · Ancient Wisdom · Neural Proof ◇</span>
+    </div>
+  </section>
+
+  <!-- ══════════ PROBLEM ══════════ -->
+  <section class="relative py-28 sm:py-36 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden atmosphere-2">
+    <div class="absolute inset-0 sacred-dots pointer-events-none"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-[#C9956B]/3 blur-3xl breathe pointer-events-none"></div>
+
+    <div class="relative">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start mb-16 lg:mb-24">
+        <div class="space-y-5 reveal">
+          <span class="tag">The Problem</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl leading-tight">The Pattern <span class="gold-text italic">You Can't See</span></h2>
+          <div class="gold-divider !w-12"></div>
+          <p class="text-base sm:text-lg text-[#B0A89B]/80 max-w-lg leading-relaxed">
+            Anxiety, sleep disruption, and chronic pain are not the disease. They are symptoms of deeper pattern-level disturbances that chemical solutions alone cannot reach.
+          </p>
+        </div>
+        <div class="hidden lg:flex items-center justify-center reveal">
+          <svg class="w-40 h-40 text-[#C9956B]/8" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.4">
+            <circle cx="50" cy="50" r="48"/>
+            <circle cx="50" cy="50" r="38"/>
+            <circle cx="50" cy="50" r="28"/>
+            <circle cx="50" cy="50" r="18"/>
+            <circle cx="50" cy="50" r="8"/>
+            <line x1="2" y1="50" x2="98" y2="50"/>
+            <line x1="50" y1="2" x2="50" y2="98"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
+        <div class="glass-card rounded-lg p-6 sm:p-8 lg:p-10 card-glow border-glow reveal">
+          <div class="w-10 h-10 rounded-full bg-[#C9956B]/8 flex items-center justify-center mb-4 border border-[#C9956B]/10">
+            <svg class="w-5 h-5 text-[#C9956B]/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl mb-2 text-[#E8E0D4]">Anxiety & Overwhelm</h3>
+          <p class="text-sm sm:text-base text-[#B0A89B]/70 leading-relaxed">A fragmentation of attentional patterns that traps the nervous system in perpetual hyper-vigilance.</p>
+        </div>
+        <div class="glass-card rounded-lg p-6 sm:p-8 lg:p-10 card-glow border-glow reveal">
+          <div class="w-10 h-10 rounded-full bg-[#C9956B]/8 flex items-center justify-center mb-4 border border-[#C9956B]/10">
+            <svg class="w-5 h-5 text-[#C9956B]/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M12 2a10 10 0 0110 10c0 5-4 8-10 8s-10-3-10-8c0-5 4-10 10-10z"/>
+              <path d="M12 6v6l-3 2"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl mb-2 text-[#E8E0D4]">Sleep Disruption</h3>
+          <p class="text-sm sm:text-base text-[#B0A89B]/70 leading-relaxed">When the circadian rhythm loses coherence with its fundamental frequency, rest becomes fragmented.</p>
+        </div>
+        <div class="glass-card rounded-lg p-6 sm:p-8 lg:p-10 card-glow border-glow sm:col-span-2 lg:col-span-1 reveal">
+          <div class="w-10 h-10 rounded-full bg-[#C9956B]/8 flex items-center justify-center mb-4 border border-[#C9956B]/10">
+            <svg class="w-5 h-5 text-[#C9956B]/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v4l2 2"/>
+              <path d="M8 12h8"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl mb-2 text-[#E8E0D4]">Chronic Pain</h3>
+          <p class="text-sm sm:text-base text-[#B0A89B]/70 leading-relaxed">Encoded neural loops that continue signaling threat long after the original stimulus has resolved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ BRIDGE ══════════ -->
+  <section class="relative py-28 sm:py-36 overflow-hidden atmosphere-1">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#C9956B]/3 blur-3xl breathe pointer-events-none"></div>
+    <div class="absolute inset-0 sacred-dots-dense pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 lg:mb-20 reveal">
+        <span class="tag">The Convergence</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl mt-5 mb-3 leading-tight">Ancient Wisdom. <span class="gold-text italic">Neural Proof.</span></h2>
+        <div class="gold-divider !w-20 !mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <div class="glass-card rounded-lg p-6 sm:p-8 lg:p-12 reveal">
+          <div class="relative">
+            <svg class="absolute -top-3 -right-3 w-24 h-24 text-[#C9956B]/5 pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.3">
+              <path d="M50 5 L95 50 L50 95 L5 50 Z"/>
+              <path d="M50 20 L80 50 L50 80 L20 50 Z"/>
+              <path d="M50 35 L65 50 L50 65 L35 50 Z"/>
+            </svg>
+            <span class="text-[10px] text-[#C9956B]/50 tracking-[0.25em] uppercase">The Inner Technology</span>
+            <h3 class="font-display text-2xl sm:text-3xl mt-3 text-[#E8E0D4]">Recognition</h3>
+            <p class="text-base sm:text-lg text-[#B0A89B]/70 leading-relaxed mt-4">
+              Before the rise of materialist science, a lineage of inner explorers mapped the architecture of consciousness with precision. Their central discovery: the universe is not a collection of things but a play of patterns within awareness. Suffering arises when patterns become opaque to themselves — and dissolves when they are recognized.
+            </p>
+            <div class="flex flex-wrap gap-6 mt-6">
+              <div class="text-center">
+                <div class="font-display text-base sm:text-lg text-[#C9956B]">Pratyabhijñā</div>
+                <div class="text-[9px] text-[#B0A89B]/40 uppercase tracking-[0.15em]">Recognition</div>
+              </div>
+              <div class="w-px h-8 bg-[#C9956B]/10 self-center"></div>
+              <div class="text-center">
+                <div class="font-display text-base sm:text-lg text-[#C9956B]">Spanda</div>
+                <div class="text-[9px] text-[#B0A89B]/40 uppercase tracking-[0.15em]">Vibration</div>
+              </div>
+              <div class="w-px h-8 bg-[#C9956B]/10 self-center"></div>
+              <div class="text-center">
+                <div class="font-display text-base sm:text-lg text-[#C9956B]">Upāya</div>
+                <div class="text-[9px] text-[#B0A89B]/40 uppercase tracking-[0.15em]">Path</div>
+              </div>
+            </div>
+            <a href="/philosophy" class="group inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-[#C9956B]/70 hover:text-[#C9956B] transition-colors mt-6">
+              Read the philosophy
+              <svg class="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-lg p-6 sm:p-8 lg:p-12 reveal">
+          <div class="relative">
+            <svg class="absolute -bottom-3 -left-3 w-24 h-24 text-[#C9956B]/5 pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.3">
+              <circle cx="50" cy="50" r="45"/>
+              <line x1="50" y1="5" x2="50" y2="95"/>
+              <line x1="5" y1="50" x2="95" y2="50"/>
+              <circle cx="50" cy="50" r="15" fill="rgba(201,149,107,0.03)"/>
+            </svg>
+            <span class="text-[10px] text-[#C9956B]/50 tracking-[0.25em] uppercase">The Clinical Validation</span>
+            <h3 class="font-display text-2xl sm:text-3xl mt-3 text-[#E8E0D4]">Neuroscience</h3>
+            <div class="space-y-4 mt-4">
+              <div class="pull-quote !border-l !py-0 !pl-4">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] text-[#C9956B] uppercase tracking-[0.15em]">Nature</span>
+                  <span class="text-[9px] text-[#B0A89B]/30">2024</span>
+                </div>
+                <p class="!text-sm sm:!text-base !text-[#B0A89B]/80 !font-normal !not-italic">The <strong class="text-[#E8E0D4]">rACC→Pn</strong> circuit produces analgesia without conditioning. <strong class="text-[#E8E0D4]">65% opioid-receptor-positive</strong>.</p>
+              </div>
+              <div class="pull-quote !border-l !py-0 !pl-4">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] text-[#C9956B] uppercase tracking-[0.15em]">Comms Biology</span>
+                  <span class="text-[9px] text-[#B0A89B]/30">2025</span>
+                </div>
+                <p class="!text-sm sm:!text-base !text-[#B0A89B]/80 !font-normal !not-italic">DMN reduction <strong class="text-[#E8E0D4]">d = −1.78</strong> (p = 0.00009), BDNF <strong class="text-[#E8E0D4]">+71%</strong> (p = 0.001).</p>
+              </div>
+              <div class="pull-quote !border-l !py-0 !pl-4">
+                <span class="text-[10px] text-[#C9956B] uppercase tracking-[0.15em]">Predictive Processing</span>
+                <p class="!text-sm sm:!text-base !text-[#B0A89B]/80 !font-normal !not-italic mt-1">Perception is <strong class="text-[#E8E0D4]">controlled hallucination</strong>. Change the generative model, change reality.</p>
+              </div>
+            </div>
+            <a href="/science" class="group inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-[#C9956B]/70 hover:text-[#C9956B] transition-colors mt-6">
+              Explore the research
+              <svg class="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ HOW IT WORKS ══════════ -->
+  <section class="relative py-28 sm:py-36 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center overflow-hidden atmosphere-2">
+    <div class="absolute inset-0 sacred-dots pointer-events-none"></div>
+
+    <div class="relative">
+      <div class="mb-14 sm:mb-20 reveal">
+        <span class="tag">The Method</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl mt-5 mb-3 leading-tight">The Way Forward</h2>
+        <div class="gold-divider !w-16 !mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-10 relative">
+        <div class="hidden md:block absolute top-14 left-[16.66%] right-[16.66%] h-px bg-gradient-to-r from-transparent via-[#C9956B]/10 to-transparent"></div>
+
+        <div class="glass-card rounded-lg p-6 sm:p-8 reveal">
+          <div class="relative inline-flex mb-5">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-b from-[#C9956B]/10 to-transparent flex items-center justify-center border border-[#C9956B]/15">
+              <span class="text-xl sm:text-2xl text-[#C9956B] font-display tracking-tight">I</span>
+            </div>
+            <div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#C9956B]/10 flex items-center justify-center">
+              <span class="text-[7px] text-[#C9956B]">01</span>
+            </div>
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl mb-2 text-[#E8E0D4]">Identification</h3>
+          <p class="text-sm sm:text-base text-[#B0A89B]/70 leading-relaxed max-w-xs mx-auto">Understanding the specific neural-emotional patterns that govern your health landscape.</p>
+        </div>
+
+        <div class="glass-card rounded-lg p-6 sm:p-8 reveal">
+          <div class="relative inline-flex mb-5">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-b from-[#C9956B]/10 to-transparent flex items-center justify-center border border-[#C9956B]/15">
+              <span class="text-xl sm:text-2xl text-[#C9956B] font-display tracking-tight">II</span>
+            </div>
+            <div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#C9956B]/10 flex items-center justify-center">
+              <span class="text-[7px] text-[#C9956B]">02</span>
+            </div>
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl mb-2 text-[#E8E0D4]">Alignment</h3>
+          <p class="text-sm sm:text-base text-[#B0A89B]/70 leading-relaxed max-w-xs mx-auto">Systematic recalibration through targeted attention, breath, and awareness protocols.</p>
+        </div>
+
+        <div class="glass-card rounded-lg p-6 sm:p-8 reveal">
+          <div class="relative inline-flex mb-5">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-b from-[#C9956B]/10 to-transparent flex items-center justify-center border border-[#C9956B]/15">
+              <span class="text-xl sm:text-2xl text-[#C9956B] font-display tracking-tight">III</span>
+            </div>
+            <div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#C9956B]/10 flex items-center justify-center">
+              <span class="text-[7px] text-[#C9956B]">03</span>
+            </div>
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl mb-2 text-[#E8E0D4]">Recognition</h3>
+          <p class="text-sm sm:text-base text-[#B0A89B]/70 leading-relaxed max-w-xs mx-auto">Seeing the pattern for what it is — at which point it can no longer hold you in its grip.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ MANIFESTO ══════════ -->
+  <section class="relative py-28 sm:py-36 overflow-hidden atmosphere-3">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[#C9956B]/5 blur-3xl breathe pointer-events-none"></div>
+    <div class="absolute inset-0 sacred-dots-dense pointer-events-none"></div>
+
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 sm:space-y-10 reveal">
+      <svg class="w-8 h-8 sm:w-10 sm:h-10 mx-auto text-[#C9956B]/10" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/>
+      </svg>
+
+      <blockquote class="font-display text-2xl sm:text-3xl lg:text-4xl italic text-[#E8E0D4] leading-snug sm:leading-normal text-balance">
+        "Your health is a pattern waiting to be <span class="text-[#C9956B] not-italic font-semibold">reclaimed</span>."
+      </blockquote>
+
+      <div class="gold-divider !w-16 !mx-auto"></div>
+
+      <p class="text-[10px] tracking-[0.3em] text-[#C9956B]/60 uppercase">The Pattern Paradigm</p>
+
+      <a href="/about" class="group inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-[#C9956B]/70 hover:text-[#C9956B] transition-colors">
+        Read the full manifesto
+        <svg class="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════ WAITLIST ══════════ -->
+  <section class="relative py-28 sm:py-36 px-4 sm:px-6 lg:px-8 overflow-hidden atmosphere-2">
+    <div class="absolute inset-0 sacred-dots-dense opacity-30 pointer-events-none"></div>
+    <div class="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-[#C9956B]/5 blur-3xl breathe pointer-events-none"></div>
+
+    <div class="relative max-w-xl mx-auto text-center space-y-8 sm:space-y-10">
+      <div class="reveal">
+        <span class="tag">Get Early Access</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl mt-5 mb-3 leading-tight">Reclaim Your Pattern.</h2>
+        <div class="gold-divider !w-16 !mx-auto"></div>
+      </div>
+
+      <p class="text-base sm:text-lg text-[#B0A89B]/80 reveal">Join the early circle. Our journey begins shortly.</p>
+
+      <form class="flex flex-col sm:flex-row gap-4 sm:gap-6 reveal" action="/waitlist" method="GET">
+        <div class="flex-1 w-full">
+          <input id="email" class="w-full bg-transparent border-b border-white/10 px-0 py-3 text-[#F2EDE4] text-base outline-none transition-all duration-300 focus:border-[#C9956B]/50 placeholder:text-[#B0A89B]/20" name="email" placeholder="Your email" required type="email"/>
+        </div>
+        <button class="btn-primary" type="submit">Get Early Access</button>
+      </form>
+
+      <p class="text-[10px] text-[#B0A89B]/20 uppercase tracking-[0.2em] reveal">Highly selective. Privacy guaranteed.</p>
+    </div>
+  </section>
+</BaseLayout>

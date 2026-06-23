@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pattern Paradigm | Ancient Wisdom. Neural Proof.</title>
+<meta name="description" content="A digital sanctuary where ancient wisdom meets modern neuroscience."/>
+<meta property="og:title" content="Pattern Paradigm — Ancient Wisdom. Neural Proof."/>
+<meta property="og:description" content="Your health is a pattern waiting to be reclaimed."/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        surface: "#131318",
+        "surface-container-low": "#1b1b20",
+        "surface-container": "#16161D",
+        "surface-container-high": "#2a292f",
+        "on-surface": "#F5F0E8",
+        "on-surface-variant": "#d5c3b8",
+        secondary: "#cac6be",
+        primary: "#C9956B",
+        "on-primary": "#4a2807",
+        background: "#0D0D12",
+      },
+      fontFamily: {
+        display: ["Playfair Display", "serif"],
+        body: ["EB Garamond", "serif"],
+      },
+    },
+  },
+};
+</script>
+<style>
+html { scroll-behavior: smooth; }
+body {
+  background-color: #0D0D12;
+  color: #F5F0E8;
+  font-family: "EB Garamond", serif;
+}
+
+.hero-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(201, 149, 107, 0.08) 0%, rgba(13, 13, 18, 0) 70%);
+}
+
+.sacred-dots {
+  background-image: radial-gradient(circle at 2px 2px, rgba(245, 240, 232, 0.04) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.gold-border-subtle {
+  border: 1px solid rgba(201, 149, 107, 0.15);
+  transition: all 0.4s ease;
+}
+.gold-border-subtle:hover {
+  border-color: rgba(201, 149, 107, 0.5);
+  background: rgba(22, 22, 29, 0.8);
+}
+
+.pattern-ring {
+  border: 1px solid rgba(201, 149, 107, 0.25);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.waitlist-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(245, 240, 232, 0.2);
+  padding: 12px 0;
+  color: #F5F0E8;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.waitlist-input:focus {
+  border-bottom-color: #C9956B;
+  box-shadow: 0 4px 12px -4px rgba(201, 149, 107, 0.2);
+}
+.waitlist-input::placeholder {
+  color: rgba(245, 240, 232, 0.3);
+}
+
+.glass-nav {
+  background: rgba(13, 13, 18, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(201, 149, 107, 0.08);
+}
+
+.nav-link {
+  position: relative;
+  color: #cac6be;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 1px;
+  background: #C9956B;
+  transition: width 0.3s ease;
+}
+.nav-link:hover { color: #C9956B; }
+.nav-link:hover::after { width: 100%; }
+
+.marquee-track {
+  display: flex;
+  gap: 3rem;
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="fixed sr-only focus:not-sr-only focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-background focus:rounded">Skip to content</a>
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 w-full z-50 glass-nav transition-transform duration-300" role="navigation" aria-label="Main navigation" id="nav">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-16 md:h-20">
+    <a href="#" class="font-display text-2xl text-primary tracking-tight">Pattern Paradigm</a>
+    <div class="hidden md:flex items-center gap-8 uppercase tracking-[0.15em] text-sm">
+      <a href="#philosophy" class="nav-link">Philosophy</a>
+      <a href="#science" class="nav-link">Science</a>
+      <a href="#manifesto" class="nav-link">Manifesto</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="#waitlist" class="hidden sm:inline-block bg-primary text-background px-5 py-2 rounded text-xs uppercase tracking-[0.15em] hover:brightness-110 transition-all active:scale-95">Join the Waitlist</a>
+      <button id="menuBtn" class="md:hidden p-2 text-on-surface hover:text-primary transition-colors" aria-label="Toggle menu" aria-expanded="false">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path id="menuOpen" stroke-linecap="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+          <path id="menuClose" class="hidden" stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="md:hidden hidden border-t border-white/5 bg-background/95 backdrop-blur-md">
+    <div class="px-4 py-4 space-y-3">
+      <a href="#philosophy" class="block px-3 py-2 text-on-surface text-lg hover:text-primary transition-colors">Philosophy</a>
+      <a href="#science" class="block px-3 py-2 text-on-surface text-lg hover:text-primary transition-colors">Science</a>
+      <a href="#manifesto" class="block px-3 py-2 text-on-surface text-lg hover:text-primary transition-colors">Manifesto</a>
+      <a href="#waitlist" class="block px-3 py-2 text-primary text-lg font-medium">Join the Waitlist →</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div class="absolute inset-0 hero-glow pointer-events-none"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] xs:w-[400px] xs:h-[400px] sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] opacity-10 pointer-events-none">
+      <div class="pattern-ring w-full h-full"></div>
+      <div class="pattern-ring w-[80%] h-[80%]"></div>
+      <div class="pattern-ring w-[60%] h-[60%]"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto space-y-6 sm:space-y-8">
+      <span class="text-xs sm:text-sm text-primary tracking-[0.3em] uppercase opacity-70" id="heroLabel">A Digital Sanctuary for Consciousness</span>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-on-surface leading-tight">
+        The Pattern of <br/><span class="italic">Consciousness</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-secondary/80 max-w-2xl mx-auto leading-relaxed">
+        Ancient wisdom and modern neuroscience converge on a single truth:<br class="hidden sm:block"/>
+        <span class="text-primary/90">your health is a pattern</span> — and patterns can be recognized.
+      </p>
+      <div class="flex flex-col xs:flex-row items-center justify-center gap-4 sm:gap-6 pt-2 sm:pt-4">
+        <a href="#waitlist" class="w-full xs:w-auto bg-primary text-background px-8 sm:px-10 py-3 sm:py-4 rounded text-xs uppercase tracking-[0.15em] hover:brightness-110 transition-all active:scale-95 text-center font-medium">
+          Join the Waitlist
+        </a>
+        <a href="#philosophy" class="text-on-surface text-xs uppercase tracking-[0.15em] group flex items-center gap-2">
+          Learn More
+          <span class="w-8 h-px bg-primary scale-x-50 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+      </div>
+    </div>
+    <div class="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
+      <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="py-6 sm:py-8 border-t border-b border-white/5 overflow-hidden bg-surface-container-lowest/50">
+    <div class="marquee-track">
+      <span class="text-primary/40 text-xs uppercase tracking-[0.25em] whitespace-nowrap">The body is a pattern · The mind is a pattern · Health is recognition · Ancient Wisdom · Neural Proof ·</span>
+      <span class="text-primary/40 text-xs uppercase tracking-[0.25em] whitespace-nowrap">The body is a pattern · The mind is a pattern · Health is recognition · Ancient Wisdom · Neural Proof ·</span>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto sacred-dots" id="philosophy">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-start mb-16 md:mb-24">
+      <div>
+        <h2 class="font-display text-3xl sm:text-4xl mb-4 sm:mb-6 reveal">The Pattern You <span class="italic text-primary">Can't See</span></h2>
+        <p class="text-lg sm:text-xl text-secondary max-w-xl leading-relaxed reveal">
+          Anxiety, sleep disruption, and chronic pain are not the disease. They are symptoms of deeper pattern-level disturbances that chemical solutions alone cannot reach.
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+      <div class="gold-border-subtle bg-surface-container-low p-6 sm:p-8 lg:p-10 space-y-4 sm:space-y-6 reveal">
+        <span class="text-4xl sm:text-5xl block opacity-60 font-display italic" style="color:#C9956B">↯</span>
+        <h3 class="font-display text-xl sm:text-2xl">Anxiety &amp; Overwhelm</h3>
+        <p class="text-base sm:text-lg text-secondary leading-relaxed">A fragmentation of attentional patterns that traps the nervous system in perpetual hyper-vigilance.</p>
+      </div>
+      <div class="gold-border-subtle bg-surface-container-low p-6 sm:p-8 lg:p-10 space-y-4 sm:space-y-6 reveal">
+        <span class="text-4xl sm:text-5xl block opacity-60 font-display italic" style="color:#C9956B">○</span>
+        <h3 class="font-display text-xl sm:text-2xl">Sleep Disruption</h3>
+        <p class="text-base sm:text-lg text-secondary leading-relaxed">When the circadian rhythm loses coherence with its fundamental frequency, rest becomes fragmented.</p>
+      </div>
+      <div class="gold-border-subtle bg-surface-container-low p-6 sm:p-8 lg:p-10 space-y-4 sm:space-y-6 sm:col-span-2 lg:col-span-1 reveal">
+        <span class="text-4xl sm:text-5xl block opacity-60 font-display italic" style="color:#C9956B">∞</span>
+        <h3 class="font-display text-xl sm:text-2xl">Chronic Pain</h3>
+        <p class="text-base sm:text-lg text-secondary leading-relaxed">Encoded neural loops that continue signaling threat long after the original stimulus has resolved.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE BRIDGE -->
+  <section class="py-24 sm:py-32 bg-surface-container-lowest overflow-hidden" id="science">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl sm:text-4xl text-center mb-16 sm:mb-20 reveal">Ancient Wisdom. <span class="text-primary italic">Neural Proof.</span></h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/5">
+        <div class="p-6 sm:p-10 lg:p-16 space-y-6 sm:space-y-8 lg:space-y-10 reveal">
+          <div class="space-y-3 sm:space-y-4">
+            <span class="text-xs text-primary tracking-[0.2em] uppercase">The Inner Technology</span>
+            <h3 class="font-display text-2xl sm:text-3xl">Recognition</h3>
+          </div>
+          <p class="text-lg sm:text-xl text-secondary leading-relaxed">
+            Before the rise of materialist science, a lineage of inner explorers mapped the architecture of consciousness with precision. Their central discovery: the universe is not a collection of things but a play of patterns within awareness. Suffering arises when patterns become opaque to themselves — and dissolves when they are recognized.
+          </p>
+          <div class="flex gap-8 sm:gap-12 pt-4">
+            <div>
+              <div class="font-display text-xl sm:text-2xl text-primary">Pratyabhijñā</div>
+              <div class="text-xs text-secondary/60 uppercase tracking-[0.15em]">Recognition</div>
+            </div>
+            <div>
+              <div class="font-display text-xl sm:text-2xl text-primary">Spanda</div>
+              <div class="text-xs text-secondary/60 uppercase tracking-[0.15em]">Vibration</div>
+            </div>
+            <div>
+              <div class="font-display text-xl sm:text-2xl text-primary">Upāya</div>
+              <div class="text-xs text-secondary/60 uppercase tracking-[0.15em]">Path</div>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 sm:p-10 lg:p-16 space-y-6 sm:space-y-8 lg:space-y-10 reveal">
+          <div class="space-y-3 sm:space-y-4">
+            <span class="text-xs text-primary tracking-[0.2em] uppercase">The Clinical Validation</span>
+            <h3 class="font-display text-2xl sm:text-3xl">Neuroscience</h3>
+          </div>
+          <div class="space-y-6 sm:space-y-8">
+            <div class="border-l-2 border-primary/30 pl-4 sm:pl-6 py-2">
+              <div class="text-xs text-primary mb-1 uppercase tracking-[0.15em]">Nature (2024)</div>
+              <p class="text-base sm:text-lg text-secondary leading-relaxed">Identification of the rACC→Pn neural circuit. Activating this prefrontal-cerebellar pathway alone produces analgesia — no conditioning, no ritual, no pill required. The circuit is 65% opioid-receptor-positive. Belief becomes biology at the synaptic level.</p>
+            </div>
+            <div class="border-l-2 border-primary/30 pl-4 sm:pl-6 py-2">
+              <div class="text-xs text-primary mb-1 uppercase tracking-[0.15em]">Communications Biology (2025)</div>
+              <p class="text-base sm:text-lg text-secondary leading-relaxed">Mind-body practice produces measurable neural change: Default Mode Network connectivity drops (d = −1.78, p = 0.00009), BDNF rises (p = 0.001), endogenous opioid pathways upregulate (p = 0.03). The nervous system restructures.</p>
+            </div>
+            <div class="border-l-2 border-primary/30 pl-4 sm:pl-6 py-2">
+              <div class="text-xs text-primary mb-1 uppercase tracking-[0.15em]">Predictive Processing</div>
+              <p class="text-base sm:text-lg text-secondary leading-relaxed">Perception is the brain's controlled hallucination — reality constructed from prior beliefs. Change the belief, change the world. What was once called māyā is now called the generative model.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+    <h2 class="font-display text-3xl sm:text-4xl mb-12 sm:mb-20 reveal">The Way Forward</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8 lg:gap-16 relative">
+      <div class="hidden sm:block absolute top-12 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/15 to-transparent pointer-events-none"></div>
+      <div class="space-y-4 sm:space-y-6 reveal">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 bg-surface-container-high rounded-full flex items-center justify-center mx-auto border border-primary/10">
+          <span class="text-2xl sm:text-3xl text-primary font-display italic">I</span>
+        </div>
+        <div class="space-y-2">
+          <h3 class="font-display text-xl sm:text-2xl">Identification</h3>
+          <p class="text-base sm:text-lg text-secondary max-w-xs mx-auto leading-relaxed">Understanding the specific neural-emotional patterns that govern your health landscape.</p>
+        </div>
+      </div>
+      <div class="space-y-4 sm:space-y-6 reveal">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 bg-surface-container-high rounded-full flex items-center justify-center mx-auto border border-primary/10">
+          <span class="text-2xl sm:text-3xl text-primary font-display italic">II</span>
+        </div>
+        <div class="space-y-2">
+          <h3 class="font-display text-xl sm:text-2xl">Alignment</h3>
+          <p class="text-base sm:text-lg text-secondary max-w-xs mx-auto leading-relaxed">Systematic recalibration through targeted attention, breath, and awareness protocols.</p>
+        </div>
+      </div>
+      <div class="space-y-4 sm:space-y-6 reveal">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 bg-surface-container-high rounded-full flex items-center justify-center mx-auto border border-primary/10">
+          <span class="text-2xl sm:text-3xl text-primary font-display italic">III</span>
+        </div>
+        <div class="space-y-2">
+          <h3 class="font-display text-xl sm:text-2xl">Recognition</h3>
+          <p class="text-base sm:text-lg text-secondary max-w-xs mx-auto leading-relaxed">Seeing the pattern for what it is — at which point it can no longer hold you in its grip.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 bg-surface-container overflow-hidden" id="manifesto">
+    <div class="max-w-4xl mx-auto text-center space-y-8 sm:space-y-12 reveal">
+      <svg class="w-8 h-8 sm:w-10 sm:h-10 mx-auto text-primary/20" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/>
+      </svg>
+      <blockquote class="font-display text-2xl sm:text-3xl lg:text-4xl italic text-on-surface leading-snug sm:leading-normal">
+        "Your health is a pattern waiting to be <span class="text-primary not-italic font-semibold">reclaimed</span>."
+      </blockquote>
+      <div class="w-20 sm:w-24 h-px bg-primary mx-auto opacity-40"></div>
+      <p class="text-xs tracking-[0.2em] text-primary uppercase">The Pattern Paradigm</p>
+    </div>
+  </section>
+
+  <!-- WAITLIST -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6 lg:px-8" id="waitlist">
+    <div class="max-w-2xl mx-auto text-center space-y-8 sm:space-y-12">
+      <div class="space-y-3 sm:space-y-4">
+        <h2 class="font-display text-3xl sm:text-4xl reveal">Reclaim Your Pattern.</h2>
+        <p class="text-lg sm:text-xl text-secondary reveal">Join the early circle. Our journey begins shortly.</p>
+      </div>
+      <form class="flex flex-col sm:flex-row gap-6 sm:gap-8 items-end" onsubmit="event.preventDefault(); alert('Thank you. You are on the waitlist.');">
+        <div class="flex-1 w-full text-left">
+          <label class="text-xs text-secondary uppercase tracking-[0.15em] opacity-60 mb-2 block" for="email">Email Address</label>
+          <input id="email" class="waitlist-input w-full" name="email" placeholder="name@domain.com" required type="email"/>
+        </div>
+        <button class="w-full sm:w-auto bg-primary text-background px-10 sm:px-12 py-3 sm:py-4 rounded text-xs uppercase tracking-[0.15em] hover:brightness-110 active:scale-95 transition-all font-medium" type="submit">
+          Get Early Access
+        </button>
+      </form>
+      <p class="text-xs text-secondary/40 uppercase tracking-[0.1em]">Highly selective entry. Privacy guaranteed.</p>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5" role="contentinfo">
+  <div class="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-0">
+    <div class="space-y-3 sm:space-y-4">
+      <div class="font-display text-xl sm:text-2xl text-primary">Pattern Paradigm</div>
+      <p class="text-base sm:text-lg text-secondary opacity-60">Ancient Wisdom. Neural Proof.</p>
+      <p class="text-xs text-secondary/40 pt-4 sm:pt-8">&copy; 2026 Pattern Paradigm</p>
+    </div>
+    <nav class="grid grid-cols-2 gap-x-8 sm:gap-x-16 gap-y-3 text-xs uppercase tracking-[0.15em]" aria-label="Footer links">
+      <a href="#" class="text-secondary hover:text-primary transition-colors">Privacy Policy</a>
+      <a href="#" class="text-secondary hover:text-primary transition-colors">Terms of Service</a>
+      <a href="#" class="text-secondary hover:text-primary transition-colors">Research</a>
+      <a href="#" class="text-secondary hover:text-primary transition-colors">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Scroll reveal (lightweight IntersectionObserver, no libraries)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 0.06}s`;
+    observer.observe(el);
+  });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuOpen = document.getElementById('menuOpen');
+  const menuClose = document.getElementById('menuClose');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', !expanded);
+      mobileMenu.classList.toggle('hidden');
+      menuOpen?.classList.toggle('hidden');
+      menuClose?.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuOpen?.classList.remove('hidden');
+        menuClose?.classList.add('hidden');
+      });
+    });
+  }
+
+  // Nav auto-hide
+  let lastScroll = 0;
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > lastScroll && currentScroll > 100) {
+      nav.style.transform = 'translateY(-100%)';
+    } else {
+      nav.style.transform = 'translateY(0)';
+    }
+    lastScroll = currentScroll;
+  }, { passive: true });
+});
+</script>
+</body>
+</html>

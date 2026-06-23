@@ -1,0 +1,279 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Science" description="Peer-reviewed research validating the Pattern Paradigm: Nature (2024), Communications Biology (2025), Predictive Processing. Visual evidence and data.">
+  <Nav slot="nav" currentPath="/science" />
+  <Footer slot="footer" />
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="relative pt-32 pb-24 sm:pt-40 sm:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto atmosphere-2">
+    <div class="absolute inset-0 sacred-dots-dense pointer-events-none"></div>
+    <div class="max-w-3xl reveal">
+      <span class="tag">Research & Evidence</span>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight mt-5 mb-6 text-[#E8E0D4]">Neural <span class="gold-text italic">Proof</span></h1>
+      <p class="text-base sm:text-lg text-[#B0A89B]/70 leading-relaxed">
+        The Pattern Paradigm is not a belief system. It is a hypothesis grounded in peer-reviewed neuroscience, clinical data, and the predictive processing framework.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════ NATURE 2024 ══════════ -->
+  <section class="py-24 sm:py-32 overflow-hidden atmosphere-1">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#C9956B]/5 blur-3xl breathe pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-5 gap-8 lg:gap-16 reveal">
+        <div class="lg:col-span-2">
+          <span class="text-[9px] text-[#C9956B]/50 tracking-[0.2em] uppercase border border-[#C9956B]/15 rounded-full px-3 py-1 inline-block mb-4">Nature (2024)</span>
+          <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl leading-tight text-[#E8E0D4]">The Placebo Circuit</h2>
+          <div class="text-sm text-[#B0A89B]/40 mt-2">Chen et al.</div>
+          <div class="w-10 h-px bg-[#C9956B]/20 mt-4"></div>
+
+          <!-- Key stat badges -->
+          <div class="mt-6 space-y-3">
+            <div class="flex items-center gap-3 glass-card rounded-lg p-3">
+              <div class="w-8 h-8 rounded-full bg-[#C9956B]/10 flex items-center justify-center shrink-0">
+                <span class="text-xs text-[#C9956B] font-display">65%</span>
+              </div>
+              <div>
+                <div class="text-xs text-[#E8E0D4]">Opioid-Receptor Positive</div>
+                <div class="text-[9px] text-[#B0A89B]/40">Hardwired for endogenous relief</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 glass-card rounded-lg p-3">
+              <div class="w-8 h-8 rounded-full bg-[#C9956B]/10 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 text-[#C9956B]/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" d="M4.5 12.75l6 6 9-13.5"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-[#E8E0D4]">No Conditioning Required</div>
+                <div class="text-[9px] text-[#B0A89B]/40">Native capacity, always present</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 glass-card rounded-lg p-3">
+              <div class="w-8 h-8 rounded-full bg-[#C9956B]/10 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 text-[#C9956B]/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-[#E8E0D4]">Circuit Blocked → Pain Returns</div>
+                <div class="text-[9px] text-[#B0A89B]/40">Inhibition eliminates placebo effect</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-3 space-y-5 text-base sm:text-lg text-[#B0A89B]/80 leading-relaxed">
+          <p>In one of the most significant neuroscience discoveries of the decade, researchers identified a specific neural circuit responsible for placebo analgesia — the phenomenon where belief alone reduces pain.</p>
+          <p>The circuit runs from the <strong class="text-[#E8E0D4]">rostral anterior cingulate cortex (rACC)</strong> to the <strong class="text-[#E8E0D4]">pontine nuclei (Pn)</strong>. When activated, it produces pain relief equivalent to opioids — without any drug or conditioning.</p>
+
+          <!-- Brain circuit SVG -->
+          <div class="glass-card rounded-lg p-6 my-6">
+            <p class="text-[9px] text-[#B0A89B]/40 uppercase tracking-[0.2em] mb-4">The rACC → Pn Circuit</p>
+            <svg class="w-full h-28 sm:h-36" viewBox="0 0 600 110" preserveAspectRatio="xMidYMid meet">
+              <ellipse cx="300" cy="55" rx="280" ry="45" fill="none" stroke="rgba(201,149,107,0.06)" stroke-width="1"/>
+              <!-- Brain hemispheres -->
+              <ellipse cx="230" cy="40" rx="60" ry="25" fill="rgba(201,149,107,0.02)" stroke="rgba(201,149,107,0.08)" stroke-width="0.5"/>
+              <ellipse cx="370" cy="40" rx="60" ry="25" fill="rgba(201,149,107,0.02)" stroke="rgba(201,149,107,0.08)" stroke-width="0.5"/>
+              <!-- rACC node -->
+              <circle cx="210" cy="38" r="14" fill="rgba(201,149,107,0.08)" stroke="rgba(201,149,107,0.3)" stroke-width="1.5"/>
+              <text x="210" y="42" text-anchor="middle" fill="#C9956B" font-size="6.5" font-family="serif">rACC</text>
+              <!-- Pn node -->
+              <circle cx="410" cy="70" r="12" fill="rgba(201,149,107,0.08)" stroke="rgba(201,149,107,0.3)" stroke-width="1.5"/>
+              <text x="410" y="74" text-anchor="middle" fill="#C9956B" font-size="6.5" font-family="serif">Pn</text>
+              <!-- Arrow pathway -->
+              <path d="M224 38 Q300 20 398 70" fill="none" stroke="#C9956B" stroke-width="1" opacity="0.5">
+                <animate attributeName="stroke-dashoffset" from="200" to="0" dur="2.5s" repeatCount="indefinite"/>
+              </path>
+              <path d="M224 38 Q300 20 398 70" fill="none" stroke="#C9956B" stroke-width="2" stroke-dasharray="6 8" opacity="0.3">
+                <animate attributeName="stroke-dashoffset" from="60" to="0" dur="1.5s" repeatCount="indefinite"/>
+              </path>
+              <!-- Arrowhead -->
+              <polygon points="398,66 410,70 398,74" fill="#C9956B" opacity="0.4"/>
+              <!-- Label -->
+              <text x="300" y="15" text-anchor="middle" fill="rgba(201,149,107,0.2)" font-size="6" font-family="serif">prefrontal → cerebellar</text>
+              <!-- Opioid badge -->
+              <rect x="252" y="90" width="96" height="14" rx="7" fill="rgba(201,149,107,0.06)" stroke="rgba(201,149,107,0.1)" stroke-width="0.5"/>
+              <text x="300" y="100" text-anchor="middle" fill="rgba(201,149,107,0.4)" font-size="7" font-family="serif">65% opioid receptor+</text>
+            </svg>
+          </div>
+
+          <p>The implications are profound. The capacity for self-generated healing is not metaphor — it is a specific, identifiable neural pathway. What the tradition called Spanda may have a precise biological correlate in this prefrontal-cerebellar loop.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ COMMS BIO 2025 ══════════ -->
+  <section class="py-24 sm:py-32 overflow-hidden atmosphere-2">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-[#C9956B]/3 blur-3xl breathe pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-5 gap-8 lg:gap-16 reveal">
+        <div class="lg:col-span-2">
+          <span class="text-[9px] text-[#C9956B]/50 tracking-[0.2em] uppercase border border-[#C9956B]/15 rounded-full px-3 py-1 inline-block mb-4">Communications Biology (2025)</span>
+          <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl leading-tight text-[#E8E0D4]">The Retreat Study</h2>
+          <div class="text-sm text-[#B0A89B]/40 mt-2">Jinich-Diamant et al.</div>
+          <div class="w-10 h-px bg-[#C9956B]/20 mt-4"></div>
+        </div>
+        <div class="lg:col-span-3 space-y-5 text-base sm:text-lg text-[#B0A89B]/80 leading-relaxed">
+          <p>A seven-day mind-body retreat produced some of the largest effect sizes ever recorded in a neuroscience intervention. Four independent biomarkers showed significant change.</p>
+
+          <!-- Data visualization -->
+          <div class="glass-card rounded-lg p-6 sm:p-8 my-6">
+            <p class="text-[9px] text-[#B0A89B]/40 uppercase tracking-[0.2em] mb-6">Effect Sizes — 7-Day Retreat</p>
+
+            <div class="mb-5">
+              <div class="flex justify-between items-end mb-1.5">
+                <span class="text-sm text-[#E8E0D4] font-display">DMN Connectivity</span>
+                <span class="text-xs text-[#C9956B]">d = −1.78</span>
+              </div>
+              <div class="data-bar"><div class="data-bar-fill" data-width="89%" style="width:0%"></div></div>
+              <div class="flex justify-between text-[9px] text-[#B0A89B]/20 mt-0.5">
+                <span>0</span>
+                <span>p = 0.00009 — the largest effect in the literature</span>
+              </div>
+            </div>
+
+            <div class="mb-5">
+              <div class="flex justify-between items-end mb-1.5">
+                <span class="text-sm text-[#E8E0D4] font-display">BDNF</span>
+                <span class="text-xs text-[#C9956B]">+71%</span>
+              </div>
+              <div class="data-bar"><div class="data-bar-fill" data-width="71%" style="width:0%"></div></div>
+              <div class="flex justify-between text-[9px] text-[#B0A89B]/20 mt-0.5">
+                <span>0</span>
+                <span>p = 0.001 — neuroplasticity protein ↑</span>
+              </div>
+            </div>
+
+            <div class="mb-5">
+              <div class="flex justify-between items-end mb-1.5">
+                <span class="text-sm text-[#E8E0D4] font-display">Endogenous Opioid Activity</span>
+                <span class="text-xs text-[#C9956B]">p = 0.03</span>
+              </div>
+              <div class="data-bar"><div class="data-bar-fill" data-width="55%" style="width:0%"></div></div>
+              <div class="flex justify-between text-[9px] text-[#B0A89B]/20 mt-0.5">
+                <span>0</span>
+                <span>↑ pain regulation pathway</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between items-end mb-1.5">
+                <span class="text-sm text-[#E8E0D4] font-display">Inflammation (IL-6)</span>
+                <span class="text-xs text-[#C9956B]">p = 0.03</span>
+              </div>
+              <div class="data-bar"><div class="data-bar-fill" data-width="48%" style="width:0%"></div></div>
+              <div class="flex justify-between text-[9px] text-[#B0A89B]/20 mt-0.5">
+                <span>0</span>
+                <span>↓ systemic inflammation marker</span>
+              </div>
+            </div>
+          </div>
+
+          <p>The DMN is the neural correlate of the contracted self — the narrative generator that maintains the illusion of separation. Reducing its activity is the neurological equivalent of recognizing the pattern.</p>
+
+          <!-- Mini biomarker cards -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
+            <div class="glass-card rounded-lg p-4 text-center">
+              <div class="text-xl font-display text-[#C9956B]">d = −1.78</div>
+              <div class="text-[9px] text-[#B0A89B]/40 mt-1 uppercase tracking-[0.1em]">DMN ↓</div>
+            </div>
+            <div class="glass-card rounded-lg p-4 text-center">
+              <div class="text-xl font-display text-[#C9956B]">+71%</div>
+              <div class="text-[9px] text-[#B0A89B]/40 mt-1 uppercase tracking-[0.1em]">BDNF ↑</div>
+            </div>
+            <div class="glass-card rounded-lg p-4 text-center">
+              <div class="text-xl font-display text-[#C9956B]">p = 0.03</div>
+              <div class="text-[9px] text-[#B0A89B]/40 mt-1 uppercase tracking-[0.1em]">Opioid ↑</div>
+            </div>
+            <div class="glass-card rounded-lg p-4 text-center">
+              <div class="text-xl font-display text-[#C9956B]">p = 0.03</div>
+              <div class="text-[9px] text-[#B0A89B]/40 mt-1 uppercase tracking-[0.1em]">IL-6 ↓</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PREDICTIVE PROCESSING ══════════ -->
+  <section class="py-24 sm:py-32 overflow-hidden atmosphere-1">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-5 gap-8 lg:gap-16 reveal">
+        <div class="lg:col-span-2">
+          <span class="text-[9px] text-[#C9956B]/50 tracking-[0.2em] uppercase border border-[#C9956B]/15 rounded-full px-3 py-1 inline-block mb-4">Theoretical Framework</span>
+          <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl leading-tight text-[#E8E0D4]">Predictive Processing</h2>
+          <div class="w-10 h-px bg-[#C9956B]/20 mt-4"></div>
+        </div>
+        <div class="lg:col-span-3 space-y-4 text-base sm:text-lg text-[#B0A89B]/80 leading-relaxed">
+          <p>Predictive processing is the leading theory of brain function: the brain does not passively receive input — it actively generates predictions about the world and updates them based on prediction error.</p>
+          <p>What you perceive is the brain's <strong class="text-[#E8E0D4]">best guess</strong> — a controlled hallucination constrained by sensory data. This is computational neuroscience, not philosophy.</p>
+
+          <!-- Perception model visual -->
+          <div class="glass-card rounded-lg p-6 sm:p-8 my-6">
+            <div class="flex items-center justify-center gap-3 sm:gap-6 text-center">
+              <div>
+                <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full bg-[#C9956B]/5 border border-[#C9956B]/15 flex items-center justify-center mb-2">
+                  <span class="text-[9px] sm:text-xs text-[#C9956B] font-display">Prior</span>
+                </div>
+                <div class="text-[8px] text-[#B0A89B]/30 uppercase tracking-[0.15em]">Belief</div>
+              </div>
+              <svg class="w-5 h-5 text-[#C9956B]/20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <div>
+                <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full bg-[#C9956B]/5 border border-[#C9956B]/15 flex items-center justify-center mb-2">
+                  <span class="text-[9px] sm:text-xs text-[#C9956B] font-display">Error</span>
+                </div>
+                <div class="text-[8px] text-[#B0A89B]/30 uppercase tracking-[0.15em]">Correction</div>
+              </div>
+              <svg class="w-5 h-5 text-[#C9956B]/20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <div>
+                <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full bg-[#C9956B]/5 border border-[#C9956B]/15 flex items-center justify-center mb-2">
+                  <span class="text-[9px] sm:text-xs text-[#C9956B] font-display">World</span>
+                </div>
+                <div class="text-[8px] text-[#B0A89B]/30 uppercase tracking-[0.15em]">Perception</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pull-quote">
+            <p>"Perception is controlled hallucination. The brain generates a hypothesis, and the senses provide correction — not the other way around."</p>
+            <cite>— Anil Seth, <em>Being You</em></cite>
+          </div>
+
+          <p>The bridge to the inner technology is immediate. What the tradition called <em class="text-[#E8E0D4]">māyā</em> is now called the <strong class="text-[#E8E0D4]">generative model</strong>. The insight is identical: perceived reality is constructed, not given. Change the generative model, and the world transforms.</p>
+          <p>Chronic conditions are <strong class="text-[#E8E0D4]">stuck predictions</strong> — neural patterns learned and reinforced into reality. The way out is not to fight the prediction but to update it at the level of the generative model itself.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ REFERENCES ══════════ -->
+  <section class="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto atmosphere-2">
+    <div class="max-w-4xl mx-auto reveal">
+      <h2 class="font-display text-2xl sm:text-3xl mb-8 text-center text-[#E8E0D4]">References</h2>
+      <div class="glass-card rounded-lg p-6 sm:p-8">
+        <div class="space-y-3 text-sm text-[#B0A89B]/60">
+          <p>• Chen, W. G. et al. (2024). "A prefrontal-cerebellar circuit mediates placebo analgesia." <em>Nature</em>.</p>
+          <p>• Jinich-Diamant, A. et al. (2025). "Neurobiological and psychological effects of a 7-day mind-body retreat." <em>Communications Biology</em>, 8, 345.</p>
+          <p>• Friston, K. (2010). "The free-energy principle: a unified brain theory?" <em>Nature Reviews Neuroscience</em>, 11, 127–138.</p>
+          <p>• Seth, A. K. (2021). <em>Being You: A New Science of Consciousness</em>. Dutton.</p>
+          <p>• Barrett, L. F. (2017). <em>How Emotions Are Made</em>. Houghton Mifflin Harcourt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="py-24 sm:py-32 overflow-hidden atmosphere-3 text-center">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-[#C9956B]/5 blur-3xl breathe pointer-events-none"></div>
+    <div class="relative max-w-xl mx-auto px-4 space-y-6 reveal">
+      <h2 class="font-display text-3xl sm:text-4xl text-[#E8E0D4]">The Evidence Is Clear</h2>
+      <p class="text-base sm:text-lg text-[#B0A89B]/70">The question is no longer <em>if</em> but <em>how</em>.</p>
+      <a href="/waitlist" class="btn-primary inline-block mt-4">Join the Early Circle</a>
+    </div>
+  </section>
+</BaseLayout>

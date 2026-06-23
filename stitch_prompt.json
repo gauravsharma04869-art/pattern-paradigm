@@ -1,0 +1,13 @@
+{
+  "jsonrpc": "2.0",
+  "id": 6,
+  "method": "tools/call",
+  "params": {
+    "name": "generate_screen_from_text",
+    "arguments": {
+      "projectId": "14042409990906520487",
+      "prompt": "Create a full desktop landing page for Pattern Paradigm, a premium mind-body health platform. The brand is dark, mystical, and premium — targeting high-net-worth individuals who have tried everything for chronic health issues (anxiety, sleep, pain). DARK color scheme: deep charcoal backgrounds (#0D0D12), warm gold accents (#C9956B), cream text (#F5F0E8). Aesthetic: minimalist, spacious, elegant, with subtle mystical/sacred geometry elements. Use PLAYFAIR_DISPLAY serif for headlines and EB_GARAMOND serif for body text. Sections (in order): 1) HERO: Full-screen, bold headline about patterns and consciousness, subtitle bridging ancient wisdom + modern neuroscience, primary CTA button Join the Waitlist in gold, secondary text link Learn More. Include subtle ambient glow or gradient effect. 2) THE PROBLEM: Section titled The Pattern You Can't See — short paragraph about how anxiety, sleep disruption, and chronic pain are symptoms of deeper pattern disorders that chemical solutions can't fix. Clean card layout with 3 symptom cards. 3) THE BRIDGE: Section titled Ancient Wisdom. Neural Proof. — Side-by-side layout showing Trika philosophy and modern neuroscience as complementary. Key stats: Nature 2024 (placebo circuit), Nature Comms Bio 2025 (BDNF, DMN). 4) HOW IT WORKS: 3-step visual process. 5) MANIFESTO: A bold quote section with large serif text about reclaiming your patterns. 6) WAITLIST: CTA section with email input field and Get Early Access button. 7) FOOTER: Simple footer with brand name, tagline, and subtle links. Everything should feel premium, calm, and intellectually serious — NOT like a typical wellness site. No bright colors. No stock photos of yogis. Just elegant typography, negative space, and subtle atmospheric effects.",
+      "deviceType": "DESKTOP"
+    }
+  }
+}

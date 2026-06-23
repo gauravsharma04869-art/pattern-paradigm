@@ -1,0 +1,138 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title} — Pattern Paradigm</title>
+  <meta name="description" content={description} />
+  <meta property="og:title" content={`${title} — Pattern Paradigm`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="mouseGlow"></div>
+  <slot name="nav" />
+  <main class="relative z-10 flex-1">
+    <slot />
+  </main>
+  <slot name="footer" />
+
+  <script>
+    (function() {
+      // ---- Mouse Glow ----
+      const glow = document.getElementById('mouseGlow');
+      if (glow) {
+        let mx = -500, my = -500;
+        let gx = -500, gy = -500;
+        document.addEventListener('mousemove', (e) => {
+          mx = e.clientX;
+          my = e.clientY;
+        }, { passive: true });
+        function animateGlow() {
+          gx += (mx - gx) * 0.08;
+          gy += (my - gy) * 0.08;
+          glow.style.transform = `translate(${gx - 250}px, ${gy - 250}px)`;
+          requestAnimationFrame(animateGlow);
+        }
+        animateGlow();
+      }
+
+      // ---- Nav auto-hide ----
+      let lastScroll = 0;
+      const nav = document.querySelector('nav');
+      if (nav) {
+        window.addEventListener('scroll', () => {
+          const y = window.scrollY;
+          if (y > lastScroll && y > 100) nav.style.transform = 'translateY(-100%)';
+          else nav.style.transform = 'translateY(0)';
+          lastScroll = y;
+        }, { passive: true });
+      }
+
+      // ---- Mobile menu ----
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          const exp = menuBtn.getAttribute('aria-expanded') === 'true';
+          menuBtn.setAttribute('aria-expanded', !exp);
+          mobileMenu.classList.toggle('hidden');
+          document.getElementById('menuOpen')?.classList.toggle('hidden');
+          document.getElementById('menuClose')?.classList.toggle('hidden');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+            document.getElementById('menuOpen')?.classList.remove('hidden');
+            document.getElementById('menuClose')?.classList.add('hidden');
+          });
+        });
+      }
+
+      // ---- Scroll Reveal ----
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal, .reveal-left').forEach((el, i) => {
+        el.style.transitionDelay = `${i * 0.05}s`;
+        observer.observe(el);
+      });
+
+      // ---- Parallax on scroll ----
+      const parallaxEls = document.querySelectorAll('.parallax-slow, .parallax-medium');
+      if (parallaxEls.length && window.innerWidth > 768) {
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              const y = window.scrollY;
+              parallaxEls.forEach(el => {
+                const speed = el.classList.contains('parallax-slow') ? 0.05 : 0.1;
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                  el.style.transform = `translateY(${y * speed}px)`;
+                }
+              });
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }, { passive: true });
+      }
+
+      // ---- Data bars animation ----
+      const barObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const bar = entry.target;
+            const width = bar.getAttribute('data-width');
+            if (width) bar.style.width = width;
+          }
+        });
+      }, { threshold: 0.3 });
+      document.querySelectorAll('.data-bar-fill').forEach(el => barObserver.observe(el));
+    })();
+  </script>
+</body>
+</html>

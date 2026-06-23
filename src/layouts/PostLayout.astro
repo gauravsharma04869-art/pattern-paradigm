@@ -1,0 +1,58 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  frontmatter: {
+    title: string;
+    date: string;
+    readTime: number;
+    excerpt: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title} description={frontmatter.excerpt}>
+  <slot name="nav" />
+
+  <!-- Header -->
+  <header class="relative pt-32 pb-12 sm:pt-40 sm:pb-16 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto overflow-hidden atmosphere-1">
+    <div class="absolute inset-0 sacred-dots-dense pointer-events-none"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-[#C9956B]/4 blur-3xl breathe pointer-events-none"></div>
+
+    <div class="relative reveal">
+      <div class="flex items-center gap-4 text-[9px] text-[#B0A89B]/40 uppercase tracking-[0.15em] mb-4">
+        <a href="/journal" class="text-[#C9956B]/60 hover:text-[#C9956B] transition-colors">← Journal</a>
+        <span class="w-px h-3 bg-[#C9956B]/10"></span>
+        <time datetime={frontmatter.date}>
+          {new Date(frontmatter.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+        </time>
+        <span class="w-px h-3 bg-[#C9956B]/10"></span>
+        <span>{frontmatter.readTime} min read</span>
+      </div>
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl leading-tight text-[#E8E0D4]">{frontmatter.title}</h1>
+    </div>
+  </header>
+
+  <!-- Body -->
+  <div class="px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto reveal atmosphere-2">
+    <article class="prose-custom max-w-none py-10 sm:py-14">
+      <slot />
+    </article>
+  </div>
+
+  <!-- Footer -->
+  <footer class="pb-20 sm:pb-32 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+    <div class="pt-8 sm:pt-10 border-t border-[#C9956B]/5 reveal">
+      <a href="/journal" class="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-[#C9956B]/70 hover:text-[#C9956B] transition-colors">
+        <svg class="w-3 h-3 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+        </svg>
+        Back to Journal
+      </a>
+    </div>
+  </footer>
+
+  <slot name="footer" />
+</BaseLayout>
